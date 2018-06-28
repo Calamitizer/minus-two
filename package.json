@@ -1,0 +1,18 @@
+{
+  "name": "minus-two",
+  "version": "1.0.0",
+  "description": "Visualizations in a spacetime with Minkowski metric (++--)",
+  "author": "Alex Ruble <jaruble@ncsu.edu>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/methods/deploy.js",
+    "sdev": "nodemon ./server/methods/deploy.js"
+  },
+  "dependencies": {
+    "two.js": "^0.7.0-alpha.1"
+  },
+  "engines": {
+    "node": "8.11.3"
+  }
+}
