@@ -1,10 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
-const MTwo = () => (
-  <div>
-    <h1>(+ + - -)</h1>
-  </div>
-);
+import MTwo from '~/MTwo/MTwo';
 
 ReactDOM.render(<MTwo />, document.getElementById('mount-point'));

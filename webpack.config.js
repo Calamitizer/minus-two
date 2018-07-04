@@ -4,6 +4,8 @@
     const webpack = require('webpack');
     const path = require('path');
 
+    const resolveDir = subpath => path.resolve(__dirname, subpath);
+
     const config = {
         mode: 'development',
         entry: ['./client/src/index.tsx'],
@@ -13,7 +15,7 @@
         output: {
             filename: 'mtwo.min.js',
             publicPath: '',
-            path: path.resolve(__dirname, 'client/www'),
+            path: resolveDir('client/www'),
         },
 
         devServer: {
@@ -24,6 +26,13 @@
 
         resolve: {
             extensions: ['.ts', '.tsx', '.js', '.json'],
+            modules: [
+                resolveDir('node_modules'),
+                resolveDir('client/src'),
+            ],
+            alias: {
+                '~': resolveDir('client/src'),
+            },
         },
 
         module: {
